@@ -1,0 +1,224 @@
+login as: skupinskim
+skupinskim@213.184.8.36's password:
+Linux bad2 4.10.17-1-pve #1 SMP PVE 4.10.17-16 (Tue, 11 Jul 2017 09:55:44 +0200)                                                                                                                                                              x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Wed Oct 27 14:05:22 2021 from 213.184.8.151
+skupinskim@bad2:~$ mysqli -u skupinskim -p
+-bash: mysqli: command not found
+skupinskim@bad2:~$ mysqli -u skupinskim -p
+-bash: mysqli: command not found
+skupinskim@bad2:~$ mysql -u skupinskim -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 234
+Server version: 8.0.22 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+mysql> use skupinskim
+
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+
+
+
+
+^[[ADatabase changed
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> create tabe izba(
+    -> create tabe izba(;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that                                                                                                                                                              corresponds to your MySQL server version for the right syntax to use near 'tabe                                                                                                                                                              izba(
+create tabe izba(' at line 1
+mysql> create table izba(
+    -> adres_budynku primary key,
+    -> nazwa_izby primary key,
+    -> metraz unsigned,
+    -> wlasciciel constraint  Foreign key ('postac2') ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that                                                                                                                                                              corresponds to your MySQL server version for the right syntax to use near 'prima                                                                                                                                                             ry key,
+nazwa_izby primary key,
+metraz unsigned,
+wlasciciel constraint  For' at line 2
+mysql> show tables
+    -> ;
++----------------------+
+| Tables_in_skupinskim |
++----------------------+
+| osoba                |
+| postac2              |
+| walizka2             |
++----------------------+
+3 rows in set (0.05 sec)
+
+mysql> create table izba( adres_budynku primary key, nazwa_izby primary key, met                                                                                                                                                             raz unsigned, wlasciciel Foreign key ('postac2');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'primary key, nazwa_izby primary key, metraz unsigned, wlasciciel Foreign key ('p' at line 1
+mysql> create table izba( adres_budynku primary key, nazwa_izby primary key, memysql> ;^Zned, wlasciciel Foreign key ('postac2');
+[1]+  Stopped                 mysql -u skupinskim -p
+^Zskupinskim@bad2:~$ mysql -u skupinskim -p
+Enter password:
+ERROR 1045 (28000): Access denied for user 'skupinskim'@'localhost' (using password: YES)
+skupinskim@bad2:~$ use skupinskim
+-bash: use: command not found
+skupinskim@bad2:~$ mysql -u skupinskim -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 295
+Server version: 8.0.22 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create table izba(
+    -> adres_budynku primary key,
+    -> nazwa_izby primary key,
+    -> metraz unsigned,
+    -> wlasciciel foreign key ('postac2');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax                                                                                                to use near 'primary key,
+nazwa_izby primary key,
+metraz unsigned,
+wlasciciel foreign key ('p' at line 2
+mysql> create table izba( adres_budynku primary key, nazwa_izby primary key, metraz unsigned, wlasciciel foreign key ('postac2');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax                                                                                                to use near 'primary key, nazwa_izby primary key, metraz unsigned, wlasciciel foreign key ('p' at line 1
+mysql>
+mysql>
+mysql>
+mysql> create table izba( adres_budynku int  primary key, nazwa_izby int primary key, metraz unsigned, wlasciciel foreign key ('postac2');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax                                                                                                to use near 'unsigned, wlasciciel foreign key ('postac2')' at line 1
+mysql> create table izba( adres_budynku int auto_increment primary key, nazwa_izby int primary key, metraz unsigned, wlasciciel foreign key ('postac2');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'unsigned, wlasciciel foreign key ('postac2')' at line 1
+mysql> create table izba( adres_budynku CONSTRAINT primary key, nazwa_izby CONSTRAINT primary key, metraz unsigned, wlasciciel foreign key ('postac2');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CONSTRAINT primary key, nazwa_izby CONSTRAINT primary key, metraz unsigned, wlas' at line 1
+mysql> create table izba( adres_budynku constraint primary key, nazwa_izby constraint primary key, metraz unsigned, wlasciciel foreign key ('postac2');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'constraint primary key, nazwa_izby constraint primary key, metraz unsigned, wlas' at line 1
+mysql> create table izba( adres_budynku  , nazwa_izby , metraz unsigned, wlasciciel foreign key ('postac2'));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', nazwa_izby , metraz unsigned, wlasciciel foreign key ('postac2'))' at line 1
+mysql> create table izba( adres_budynku  , nazwa_izby , metraz unsigned, wlasciciel foreign key ('postac2'));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', nazwa_izby , metraz unsigned, wlasciciel foreign key ('postac2'))' at line 1
+mysql> create table izba( adres_budynku  , nazwa_izby , metraz unsigned, wlasciciel foreign key ('postac2'));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', nazwa_izby , metraz unsigned, wlasciciel foreign key ('postac2'))' at line 1
+mysql>
+mysql>
+mysql> create table izba( adres_budynkuvarchar(50)  , nazwa_izby varchar(20) , metraz unsigned, wlasciciel foreign key ('postac2'),primary key (adres_budynku, nazwa_izby));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(50)  , nazwa_izby varchar(20) , metraz unsigned, wlasciciel foreign key ('posta' at line 1
+mysql> create table izba( adres_budynku varchar(50)  , nazwa_izby varchar(20) , metraz unsigned, wlasciciel foreign key ('postac2'), primary key (adres_budynku, nazwa_izby));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'unsigned, wlasciciel foreign key ('postac2'), primary key (adres_budynku, nazwa_' at line 1
+mysql>
+mysql> create table izba( adres_budynku varchar(50)  , nazwa_izby varchar(20) , metraz unsigned, wlasciciel foreign key ('postac2'), primary key (adres_budynku, nazwa_izby));^C
+mysql> create table izba( adres_budynku varchar(50)  , nazwa_izby varchar(20) , metraz int unsigned, wlasciciel foreign key ('postac2'), primary key (adres_budynku, nazwa_izby));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key ('postac2'), primary key (adres_budynku, nazwa_izby))' at line 1
+mysql> create table izba( adres_budynku varchar(50)  , nazwa_izby varchar(20) , metraz int unsigned, wlasciciel int, primary key (adres_budynku, nazwa_izby));
+ERROR 1046 (3D000): No database selected
+mysql> use skupinskim;
+     Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> create table izba( adres_budynku varchar(50)  , nazwa_izby varchar(20) , metraz int unsigned, wlasciciel foreign key ('postac2'), primary key (adres_budynku, nazwa_izby));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key ('postac2'), primary key (adres_budynku, nazwa_izby))' at line 1
+mysql> create table izba( adres_budynku varchar(50)  , nazwa_izby varchar(20) , metraz int unsigned, primary key (adres_budynku, nazwa_izby)),;
+
+
+
+mysql> create table izba( adres_budynku varchar(50)  , nazwa_izby varchar(20) , metraz unsigned, wlasciciel foreign key ('postac2'), primary key (adres_budynku, nazwa_izby));
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+alter table kolor_izby where metraz
+create spizarnia
+
+
+
+
+
+
+create table przetwory(
+id_przetworu primary key,
+rok_produkcji year default 1654,
+id_wykonawcy foreign key('postac2'),
+zawartosc varchar,
+dodatek varchar default papryczka chili
+id_konsumenta foreign key ('postac2')
+
+
+
+alter table bigos z papryczka chili "where postac2"
+insert into postac2 values(5,kuba,1,2021.11.03,29)
+insert into postac2 values(6,olaf,1,2021.11.03,30)
+insert into postac2 values(7,karol,1,2021.11.03,31)
+insert into postac2 values(8,mqteusz,1,2021.11.03,31)
+insert into postac2 values(9,maciek,1,2021.11.03,21)
+
+
+create table statek(
+nazwa_statku primary key,
+rodzaj_statku enum,
+data_wodowania date_ur,
+max_ladownosc not null;
+
+
+
+insert into statek values(aqua,wodny,2021.10.21,10);
+insert into statek values(aqua,wodny,2021.10.21,10);
+
+
+
+
+
+drop spizarnia from izba
+drop izba
+----------
+lab04
+usmiercanie
+select* from postac
+select * from postac where rodzaj='wiking' optymalnie(order by data_urodzenia)
+(delete from postac where id_postaci=3;)
+set foreign key_checks=0;
+#usuwanie klucza obcego
+alter table walizka/przetwory/itd Drop foreign key ...._ibfk_....
+klucz głowny out
+alter table postac drop primary key;
+jednak trzeba auot inc zmienić
+alter table postac modify id_postaci int;
+
+
+s
+
+delete user from wikinng where wiek="najwięcej"
+alter table postac2 drop forein keywalizka2_ibfk_ 
+alter table postac add pesel char(11);
+update postac set pese ='12345678901'+ id_postaci;
+alter table postac add primary kay(pesel);
+
+
+
+Update rodzaj from postac2
+
+
+
+
+
+
+3.b update statek set max_ladownosc=max_ladownosc*0.7;
+zad3
+select nazwa from postac where nazwa like'%o%';
